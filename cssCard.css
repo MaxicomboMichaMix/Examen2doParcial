@@ -1,0 +1,27 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+
+	justify-content: center;
+	background-color: rgb(211,211,211);
+    display: flex;
+    padding: 1em;
+    border-radius: 1rem;
+    -webkit-box-shadow: 10px 10px 30px -12px rgba(125,112,125,1);
+    -moz-box-shadow: 10px 10px 30px -12px rgba(125,112,125,1);
+    box-shadow: 10px 10px 30px -12px rgba(125,112,125,1);
+    margin: 4rem;
+}
+
+
+
+.cardImage {
+    width: 40%;
+   
+    background-size:cover;
+
+
+    background-image: url(riot.png);
+}

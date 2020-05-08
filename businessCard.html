@@ -1,3 +1,8 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssCard.css">
+</head>
+
 <body>
   <div id="root"></div>
 
@@ -8,6 +13,44 @@
 
   <script type="text/babel">
     const rootElement = document.getElementById('root');
+
+    const Card = (props) => {
+            return (
+                <div className="card"> 
+                    <div className="cardImage">
+                    </div>
+                    <div className="Content">
+                        <h3 className="">{props.puesto}</h3>
+                        <p className="">{props.nombre}</p>
+                        <p className="">{props.email}</p>
+                        <p className="">{props.tel}</p>
+                        <p className="">{props.frase}</p>
+                    </div>
+
+                </div>
+            )
+        }
+
+        Card.propTypes = {
+            puesto: PropTypes.string.isRequired,
+            nombre: PropTypes.string.isRequired,
+            email: PropTypes.string.isRequired,
+            tel: PropTypes.number.isRequired,
+            frase: PropTypes.number.isRequired, 
+        }
+
+        const props = {
+            puesto: 'Lead Esport Event Manager',
+            nombre: 'Emilio Sanchez Padilla',
+            email: 'A01272940@itesm.mx',
+            tel: 7711276305,
+            
+        }  
+
+        const props2 = {
+            frase:'Experiencia en eventos masivos en el rubro de los Esports excelente trabajo en equipo con capacidad de adaptarse a cualquier ambiente de trabajo y resolucion de problematicas definidos',
+        }
+
 
     /* Business Card component
      * @param name - the name of the person displayed in the business card
@@ -20,7 +63,10 @@
 
     const app = (
       <>
-        {/* Display your business card here :) */}
+        <Card {...props}/>
+
+
+        <Card {...props2}/>
       </>
     );
 
